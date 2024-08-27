@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'Peachi';
+  src: url('../public/Peachi-Font/peachi-regular.otf');
+}
+
+:root {
+  --primary-font-family: 'Archivo', Arial, Helvetica, sans-serif;
+  --secondary-font-family: 'Peachi', Arial, Helvetica, sans-serif;
+}
+
+html {
+  font-family: var(--primary-font-family);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--secondary-font-family);
+}
+
+.text-primary {
+  color: inherit;
+}
