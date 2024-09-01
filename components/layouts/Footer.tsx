@@ -1,10 +1,60 @@
 import React from "react";
-import { phone1 } from "@/utils/constants";
+import {
+  name,
+  phone1,
+  email,
+  facebook,
+  youtube,
+  instagram,
+  address,
+} from "@/utils/constants";
+import { Facebook, Instagram, Youtube } from "lucide-react";
+import { Button } from "@nextui-org/react";
+import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer>
-      <h2>{phone1}</h2>
+      <h2 className="text-[38px]">{name}</h2>
+      <div className="footer-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+        <div className="col col-1">
+          <h3>Questions?</h3>
+          <a href="tel:{phone1}">{phone1}</a>
+          <a href="mailto:{email}">{email}</a>
+          <p>{address}</p>
+          <div className="social-icons">
+            <a href={facebook} target="_blank" rel="noopener noreferrer">
+              <Facebook />
+            </a>
+            <a href={youtube} target="_blank" rel="noopener noreferrer">
+              <Youtube />
+            </a>
+            <a href={instagram} target="_blank" rel="noopener noreferrer">
+              <Instagram />
+            </a>
+          </div>
+          <a href="/contact">Contact us</a>
+        </div>
+        <div className="col col-2">
+          <h3>Navigation</h3>
+          <Link href="/">Home</Link>
+          <Link href="/about">About</Link>
+          <Link href="/services">Services</Link>
+          <Link href="/gallery">Gallery</Link>
+          <Link href="/blog">Blog</Link>
+        </div>
+        <div className="col col-3">
+          <Button color="primary" href="/contact">
+            Schedule Your Visit
+          </Button>
+        </div>
+      </div>
+      <div className="links">
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/accessibility">Accessibility</a>
+        <a href="/medical-disclaimer">Medical Disclaimer</a>
+      </div>
+      <p>© {name} 2024</p>
     </footer>
   );
 }

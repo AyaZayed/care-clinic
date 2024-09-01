@@ -34,7 +34,7 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex gap-6 uppercase font-sans tracking-widest text-[15px]"
+        className="hidden sm:flex gap-6 uppercase font-sans leading-2 text-[15px]"
         justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
