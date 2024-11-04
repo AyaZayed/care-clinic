@@ -18,7 +18,7 @@ import ServicesDropdown from "../ui/marketing/ServicesDropdown";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const menuItems = ["About", "Blog", "Gallery"];
+  const menuItems = ["about", "blog", "gallery"];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -34,7 +34,7 @@ export default function App() {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex gap-6 uppercase font-sans leading-2 text-[15px]"
+        className="hidden sm:flex gap-6 uppercase font-sans text-[15px]"
         justify="center">
         {menuItems.map((item, index) => (
           <NavbarItem key={`${item}-${index}`}>
@@ -53,7 +53,7 @@ export default function App() {
         <NavbarItem>
           <Button
             as={Link}
-            className="bg-turqoise-600 text-white rounded-3xl"
+            className="bg-myRed-100  text-myRed-800 rounded-3xl font-bold"
             href="/appointments"
             variant="flat">
             Book an Appointment

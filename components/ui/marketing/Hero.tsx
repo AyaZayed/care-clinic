@@ -5,12 +5,12 @@ import care from "@/public/Care-outline.svg";
 export default function Hero() {
   return (
     <section>
-      <Image
+      {/* <Image
         src={care}
         alt="letters of the word care"
         width={1000}
         height={100}
-      />
+      /> */}
     </section>
   );
 }

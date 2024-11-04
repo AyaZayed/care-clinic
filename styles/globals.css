@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
-
 @font-face {
   font-family: 'Peachi';
-  src: url('../public/Peachi-Font/peachi-regular.otf');
+  src: url('../public/fonts/Peachi/peachi-regular.otf');
+}
+
+@font-face {
+  font-family: 'Archivo';
+  src: url('../public/fonts/Archivo/Archivo-VariableFont_wdth\,wght.ttf');
 }
 
 :root {
-  --primary-font-family: 'Archivo', Arial, Helvetica, sans-serif;
-  --secondary-font-family: 'Peachi', Arial, Helvetica, sans-serif;
+  --primary-font-family: 'Archivo';
+  --secondary-font-family: 'Peachi', Arial, sans-serif;
 }
 
 html {
